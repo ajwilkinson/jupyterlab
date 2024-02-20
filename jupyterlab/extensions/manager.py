@@ -99,6 +99,8 @@ class ExtensionPackage:
     documentation_url: Optional[str] = None
     package_manager_url: Optional[str] = None
     repository_url: Optional[str] = None
+    load: Optional[str] = None
+    entrypoint: Optional[str] = None
 
 
 @dataclass(frozen=True)
@@ -578,6 +580,8 @@ class ExtensionManager(PluginManager):
                 license=data.get("license"),
                 bug_tracker_url=data.get("bugs", {}).get("url"),
                 repository_url=data.get("repository", {}).get("url", data.get("repository")),
+                load=data.get("jupyterlab",{}).get("_build",{}).get("load"),
+                entrypoint=data.get("jupyterlab",{}).get("_build",{}).get("extension")
             )
 
             if get_latest_version:
