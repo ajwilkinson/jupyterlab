@@ -37,3 +37,7 @@ python -m jupyterlab
 That should work. Now we install a bunch of extensions to make sure that
 they are included:
 
+pip install bqplot
+
+Note that list extensions reports this as status:error which looks like it's a form of internal compatibility checking
+

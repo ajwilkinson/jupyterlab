@@ -101,6 +101,7 @@ class ExtensionPackage:
     repository_url: Optional[str] = None
     load: Optional[str] = None
     entrypoint: Optional[str] = None
+    pathName: Optional[str] = None
 
 
 @dataclass(frozen=True)
@@ -581,7 +582,8 @@ class ExtensionManager(PluginManager):
                 bug_tracker_url=data.get("bugs", {}).get("url"),
                 repository_url=data.get("repository", {}).get("url", data.get("repository")),
                 load=data.get("jupyterlab",{}).get("_build",{}).get("load"),
-                entrypoint=data.get("jupyterlab",{}).get("_build",{}).get("extension")
+                entrypoint=data.get("jupyterlab",{}).get("_build",{}).get("extension"),
+                pathName = name
             )
 
             if get_latest_version:
