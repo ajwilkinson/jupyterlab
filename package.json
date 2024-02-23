@@ -129,5 +129,6 @@
     "lerna": "^7.1.4",
     "typedoc": "~0.24.7",
     "typedoc-plugin-mdn-links": "^3.0.3"
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }

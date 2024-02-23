@@ -20,7 +20,8 @@ Succeeds.
 
 At this point we need to build jupyterlab. First of all, check in the venv to
 make sure that we don't have another version of jupyterlab in there - if so delete
-to make sure we use our source one.
+to make sure we use our source one. BUT - don't delete the metadata directory as that
+seems to be how the "entrypoint" stuff works.... it is in the pyproject.toml
 
 python -m jupyterlab build
 
@@ -41,3 +42,4 @@ pip install bqplot
 
 Note that list extensions reports this as status:error which looks like it's a form of internal compatibility checking
 
+Have done a pip freeze for reference....
