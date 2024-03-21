@@ -43,3 +43,9 @@ pip install bqplot
 Note that list extensions reports this as status:error which looks like it's a form of internal compatibility checking
 
 Have done a pip freeze for reference....
+
+
+The entrypoint stuff is in the metadata installed by pip - called entrypoints.txt
+
+
+
